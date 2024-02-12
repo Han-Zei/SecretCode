@@ -1,0 +1,81 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #ffe0e0; /* Soft pink background */
+  font-family: ' cursive';
+}
+
+#letter {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 500px;  
+  margin-top: 50px; /* Increased space */
+}
+
+.hidden {
+  opacity: 0;
+  max-height: 0;
+  transition: opacity 0.5s ease-in, max-height 0.5s ease-in; 
+}
+
+.show {
+  opacity: 1;
+  max-height: 500px; 
+}
+
+/* Other styles */
+
+#showLetter i {
+  opacity: 0;    /* Initially hide the hearts */
+  color: #ff6060; /* Soft red color */
+  transition: all 0.3s ease-in-out; /* Transition for hover */
+}
+
+#showLetter:hover i {
+  opacity: 1;        /* Show hearts on hover */
+  transform: translateY(-10px); /* Make hearts float upwards slightly */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#question {
+    text-align: center;
+}
+
+
+.heart-button {
+  width: 60px; 
+  height: 60px;    
+  display: flex;         
+  align-items: center;        
+  justify-content: center;    
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* A bit of shadow */
+  transition: all 0.3s ease-in-out; /* Transition for smooth effect */
+}
+
+.heart-button i {
+  color: red;      
+  font-size: 43px;   /* Adjust heart size as needed */
+}
+
+.heart-button:hover {
+  transform: scale(1.1); /* Slight scaling on hover  */
+}
+
+.heart-button.clicked { /* Add this new class */
+  opacity: 0;         /* Make invisible */
+  transform: scale(0); /* Shrink down */
+} 
+
